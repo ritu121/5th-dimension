@@ -1,34 +1,25 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700');
+
 body {
-	background-color: lightgrey;
+	background-color: rgba(211, 211, 211, 0.795);
 	padding: 0;
 	margin: 0;
 }
 
-.slide {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: unset;
-	height: 70vh;
-	font-family: 'Roboto', "Open Sans";
-	overflow: auto;
+
+
+.right_text{
+	font-family: 'Fira Sans', sans-serif;font-size:105px;color:white;font-weight: normal;
 }
 
-.col-6 col-md-4 {
-	background-color: lightsteelblue;
+.right_text1{
+	font-family: 'Fira Sans', sans-serif;font-size:57px;color:white;font-weight: normal;
+}
+.right_text2{
+	font-family: 'Fira Sans', sans-serif;font-size:90px;color:white;font-weight: normal;
 }
 
-h1 {
-	font-weight: 100;
-	font-size: 20pt;
-	color: #E43;
-}
-
-p {
-	font-weight: 200;
-}
 
 .warning-content {
 	position: absolute;
@@ -38,15 +29,136 @@ p {
 	text-align: end;
 	margin-right: 170%;
 }
+/* ------------------------card icons----------------- */
 
-/*h2 {
-	color: rgb(122, 27, 46);
-	font-family: 'Roboto', sans-serif;
-	font-weight: bolder;
-}*/
+  
+  .education {
+	--bg-color: #ffd861;
+	--bg-color-light: #ffeeba;
+	--text-color-hover: #4C5656;
+	--box-shadow-color: rgba(255, 215, 97, 0.48);
+  }
+  
+  .credentialing {
+	--bg-color: #B8F9D3;
+	--bg-color-light: #e2fced;
+	--text-color-hover: #4C5656;
+	--box-shadow-color: rgba(184, 249, 211, 0.48);
+  }
+  
+  .wallet {
+	--bg-color: #CEB2FC;
+	--bg-color-light: #F0E7FF;
+	--text-color-hover: #fff;
+	--box-shadow-color: rgba(206, 178, 252, 0.48);
+  }
+  
+  .human-resources {
+	--bg-color: #DCE9FF;
+	--bg-color-light: #f1f7ff;
+	--text-color-hover: #4C5656;
+	--box-shadow-color: rgba(220, 233, 255, 0.48);
+  }
+  
+  .card {
+	width: 220px;
+	height: 321px;
+	background: #fff;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+	transition: all 0.3s ease-out;
+	text-decoration: none;
+  }
+  
+  .card:hover {
+	transform: translateY(-5px) scale(1.005) translateZ(0);
+	box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+	  0 24px 46px var(--box-shadow-color);
+  }
+  
+  .card:hover .overlay {
+	transform: scale(4) translateZ(0);
+  }
+  
+  .card:hover .circle {
+	border-color: var(--bg-color-light);
+	background: var(--bg-color);
+  }
+  
+  .card:hover .circle:after {
+	background: var(--bg-color-light);
+  }
+  
+  .card:hover p {
+	color: var(--text-color-hover);
+  }
+  
+  .card:active {
+	transform: scale(1) translateZ(0);
+	box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+	  0 15px 24px var(--box-shadow-color);
+  }
+  
+  .card p {
+	font-size: 17px;
+	color: #4C5656;
+	margin-top: 30px;
+	z-index: 1000;
+	transition: color 0.3s ease-out;
+  }
+  
+  .circle {
+	width: 131px;
+	height: 131px;
+	border-radius: 50%;
+	background: #fff;
+	border: 2px solid var(--bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	transition: all 0.3s ease-out;
+  }
+  
+  .circle:after {
+	content: "";
+	width: 118px;
+	height: 118px;
+	display: block;
+	position: absolute;
+	background: var(--bg-color);
+	border-radius: 50%;
+	top: 7px;
+	left: 7px;
+	transition: opacity 0.3s ease-out;
+  }
+  
+  .circle svg {
+	z-index: 10000;
+	transform: translateZ(0);
+  }
+  
+  .overlay {
+	width: 118px;
+	position: absolute; 
+	height: 118px;
+	border-radius: 50%;
+	background: var(--bg-color);
+	top: 70px;
+	left: 50px;
+	z-index: 0;
+	transition: transform 0.3s ease-out;
+  }
 /*------------ Social Media Icons ----------------*/
 h2 {
-	color: gray;
+	color:darkcyan;
 	font-family: sans-serif;
 }
 
@@ -137,6 +249,7 @@ h2 {
 	position: relative;
 	margin-top: 76px;
 	margin-bottom: 76px;
+	
 }
 
 @keyframes showTopText {
@@ -177,7 +290,7 @@ h2 {
 	overflow: hidden;
 	position: absolute;
 	width: 50%;
-	font-size: 1px;
+	font-size: 2rem;
 }
 
 .animated-title>div div {
@@ -204,13 +317,15 @@ h2 {
 }
 
 .animated-title>div.text-top div span:first-child {
-	color: #767676;
-	font-size: 4rem;
+	color:darkcyan;
+	font-size: 3rem;
+     font-weight: bolder;
+	 font-family: monospace;
 }
 
 .animated-title>div.text-bottom {
 	bottom: 0;
-	font-size: 4rem;
+	font-size: 1rem;
 }
 
 .animated-title>div.text-bottom div {
@@ -220,64 +335,29 @@ h2 {
 	top: 0;
 	transform: translate(0, -100%);
 }
-
+.bottomrow{
+	padding-top:12% !important;
+}
 
 /* <------------------------------------card css---------------------------> */
-
-.hi-slide {
+ .hi-slide {
 	position: relative;
 	width: 650px;
-	height: 250px;
-	margin: 115px auto 0;
+	height: 350px;
+	margin: 20px auto 0;
 	overflow: hidden;
+    width:90%;
 }
-
-.hi-slide .hi-next,
-.hi-slide .hi-prev {
-	position: absolute;
-	top: 50%;
-	width: 40px;
-	height: 40px;
-	margin-top: -20px;
-	border-radius: 50px;
-	line-height: 40px;
-	text-align: center;
-	cursor: pointer;
-	background-color: #fff;
-	color: black;
-	transition: all 0.6s;
-	font-size: 20px;
-	font-weight: bold;
+.slide :hover{
+ border-color:brown;
 }
-
-.hi-slide .hi-next:hover,
-.hi-slide .hi-prev:hover {
-	opacity: 1;
-	background-color: #fff;
-}
-
-.hi-slide .hi-prev {
-
-	left: -60px;
-}
-
-.hi-slide .hi-prev::before {
-	content: '<';
-}
-
-.hi-slide .hi-next {
-	right: -60px;
-}
-
-.hi-slide .hi-next::before {
-	content: '>';
-}
+	
 
 .hi-slide>ul {
 	list-style: none;
 	position: relative;
 	width: 700px;
-	height: 292px;
+	height: 300px;
 	margin: 0;
 	padding: 0;
 }
@@ -286,19 +366,58 @@ h2 {
 	overflow: hidden;
 	position: absolute;
 	z-index: 0;
-	left: 377px;
-	top: 146px;
-	width: 0;
+	left: 350px;
+	top: 140px;
+	width: 100;
 	height: 0;
 	margin: 0;
 	padding: 0;
-	border: 3px solid #fff;
+	border: 3px solid rgb(6, 248, 127);
 	background-color: #333;
 	cursor: pointer;
+  
+  border-radius: 12px;
 }
 
-.hi-slide>ul>li>img {
+/* .hi-slide>ul>li>img {
 	width: 100%;
 	height: 100%;
 	background-position: center;
+} */
+/* <-----------------------------------media query------------------> */
+
+/* @media(max-width: 640px){
+	.middle{
+    display: none;
+    text-align: -webkit-center;
+    margin-top: 300px;
+	}
+   } */
+   @media only screen and (max-width:700px){
+	.right_text{
+	font-size:55px;
+	}
+
+	.right_text1{
+		font-size:35px;
+    }
+
+     .right_text2{
+			font-size:45px;
+	}
+.bottomrow{
+	padding-top:32% !important;
 }
+	
+.logosection{
+	height:290px
+}
+.hi-slide {
+	position: relative;
+	width: 650px;
+	height: 350px;
+	margin: 20px auto 0;
+	overflow: hidden;
+    width:110%;
+}
+   }

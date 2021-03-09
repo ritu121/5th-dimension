@@ -14,7 +14,8 @@
 }
 
 /* pop up */
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 1920px)
+{
 	.pop_logo{
 		width: 200px !important;
 	}
@@ -30,7 +31,9 @@
 }
 
 /* topic 1 */
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 1920px)
+
+ {
 	.family_top_text{
 		font-size: 28px !important;
 			
